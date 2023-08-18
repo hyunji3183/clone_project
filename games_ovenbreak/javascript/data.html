@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script defer src="./스크립트문서.js"></script> 
+        < 맞는표기법(스크립트문서를 다운받는동안 아래 내용을 표기하기시작함)-->
+</head>
+<body>
+    
+
+    <div class="div">선택자</div>
+
+    <script>
+        // 1. 모든 리소스 로드 후 실행
+        // 2. 컨텐츠 로드 후 실행
+
+        // 기존 css 내 선택자를 잡는방법과 동일함
+        // div{} / .div{} / #div{} / div:nth-of-type(1){}
+
+        // 내용을 주세요.(결과=>선택자)
+        // document.queryselector('.div').명령;
+        // 내용을 갱신해 주세요.(결과=>선택자라는 문자 삭제=>갱신할 내용 또는 명령)
+        // document.queryselector('.div').명령 = '갱신할 내용 또는 명령';
+
+        const element = document.querySelector('div');
+        // element라는 변수안에 div를 넣어둠
+
+        document.querySelector('div').innerText = 1000;
+        element.style = 'color:blue'
+        element.className = 'test'
+
+        let num = 1000;
+
+        element.onclick = function(){
+            element.innerText = num * 3;
+        }
+    </script>
+
+    <!-- 변수의 값이 정해져있지않을때 undefined가 확인됨 -->
+    <script>
+        // 호이스팅- var 선언문 이용시 상위로 끌어올리는 현상 (미리 저장소에 등록하기 위함)
+
+        // 중복되는이름으로 변수선언불가/ 호이스팅(X)/ 스코프 영역에서 사용
+
+            // 스코프 
+            // => { 로컬변수 => 중괄호 안에서 선언 }
+            // =>   글로벌변수 => 스크립트 상단에서 선언 (중괄호 밖)
+
+
+        let a;
+            a = 100;
+            a += 100;
+
+        console.log(
+            '문자의 제한크기는 ' + a + 'kb 입니다.'
+            );
+        // 문자와 숫자조합
+
+        console.log(
+            `문자의 제한크기는 ${a}kb 입니다.`
+            );
+        // 문자와 문자조합
+
+
+        // 가변변수와 불변변수
+        // let(가변변수) : 변수에 선언된 값을 바꿀 수 있음
+        //     let a = 1000;
+        //         a = 2000; (가능)
+
+        // const(불변변수) : 변수에 선언된 값을 바꿀 수 없음
+        //     const a = 1000;
+        //         a = 2000; (불가능)
+
+
+
+        // 변수명 지정(document.querySelector = "div"), 가변변수 let, 불변변수 const, 문자+변수조합은 배틱기호를 이용하면 용이함
+        // 연산
+
+</script>
+
+</body>
+</html>

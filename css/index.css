@@ -1,0 +1,4104 @@
+@charset "UTF-8";
+body, p, figure, h2, h3, h4, h5, div {
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img, video {
+  vertical-align: middle;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Acumin Pro-Ultra Black";
+  src: url("../fonts/FontsFree-Net-Acumin-Pro-UltraBlack.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova Extrabold";
+  src: url("../fonts/FontsFree-Net-Proxima-Nova-Xbold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard Black";
+  src: url("../fonts/Pretendard-Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard Medium";
+  src: url("../fonts/Pretendard-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard SemiBold";
+  src: url("../fonts/Pretendard-SemiBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard ExtraBold";
+  src: url("../fonts/Pretendard-ExtraBold.otf") format("truetype");
+}
+* button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-family: "Proxima Nova Extrabold";
+  font-size: 15.5px;
+  padding: 16px 24px;
+  border-radius: 36px;
+}
+* button span {
+  padding-left: 8px;
+}
+
+header {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+}
+header .bi.active {
+  background-color: rgba(255, 95, 0, 0.8);
+}
+header .bi {
+  overflow: hidden;
+  transition: 0.3s;
+  height: 48px;
+}
+header .bi .head {
+  padding: 0px 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Proxima Nova Extrabold";
+  font-weight: 800;
+  transition: 0.5s;
+}
+header .bi .head h2 {
+  font-size: 20px;
+  display: inline-block;
+  color: white;
+  width: 10%;
+}
+header .bi .head .active {
+  display: none;
+}
+header .bi .head div {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .bi .head div li {
+  width: 18%;
+  text-align: center;
+  position: relative;
+  float: left;
+}
+header .bi .head div li:nth-of-type(2) .bar li:nth-of-type(1) a {
+  color: #ffd500;
+  font-size: 14px;
+}
+header .bi .head div li:nth-of-type(2) .bar li:nth-of-type(6) a {
+  margin-top: 10px;
+  color: #ffd500;
+  font-size: 14px;
+}
+header .bi .head div li:nth-of-type(9) {
+  display: none;
+}
+header .bi .head div li > a {
+  display: block;
+  padding: 13px 0;
+  line-height: 20px;
+  font-size: 14px;
+  color: white;
+}
+header .bi .head div li > a > div {
+  display: none;
+}
+header .bi .head div li > a span {
+  font-size: 12px;
+  font-weight: bold;
+}
+header .bi .head div li .bar {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+header .bi .head div li .bar li {
+  display: block;
+  width: 100%;
+}
+header .bi .head div li .bar li a {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+}
+
+main .vi figure {
+  width: 100%;
+  position: relative;
+}
+main .vi figure video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .vi figure figcaption {
+  position: absolute;
+  left: 20%;
+  bottom: 8%;
+  white-space: pre-line;
+  font-family: "acumin-pro-condensed";
+  font-style: italic;
+  font-size: 128px;
+  font-weight: 900;
+  line-height: 102px;
+  color: rgb(255, 95, 0);
+  transform: translateY(20%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .vi figure figcaption span {
+  color: white;
+  text-shadow: 3px 3px 0 rgb(255, 95, 0);
+}
+main .vi figure .scroll {
+  width: 36px;
+  position: absolute;
+  right: 20%;
+  bottom: 8%;
+}
+main .vi figure .scroll p {
+  margin: 0 auto;
+  width: 26px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+main .vi figure .scroll p span {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 20px;
+  margin: 8px auto 0;
+  overflow: hidden;
+}
+main .vi figure .scroll p span img {
+  position: absolute;
+  left: 6px;
+  top: 5px;
+  margin: 0 auto;
+  animation-name: down-ani;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes down-ani {
+  0% {
+    transform: translate3d(0%, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0%, 100%, 0);
+  }
+}
+main .vi figure .scroll span {
+  display: inline-block;
+  font-size: 10px;
+  color: white;
+}
+main .vi.on figcaption {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0;
+}
+main .vision b {
+  white-space: pre-line;
+  font-size: 24px;
+  font-family: "Pretendard ExtraBold";
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .vision b span {
+  color: rgb(255, 95, 0);
+}
+main .vision p {
+  width: 609px;
+  height: 322px;
+  animation: ani 2s linear infinite;
+}
+@keyframes ani {
+  0% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-000.webp");
+  }
+  2.0833% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-001.webp");
+  }
+  4.1666% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-002.webp");
+  }
+  6.2499% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-003.webp");
+  }
+  8.3332% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-004.webp");
+  }
+  10.4165% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-005.webp");
+  }
+  12.4998% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-006.webp");
+  }
+  14.5831% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-007.webp");
+  }
+  16.6664% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-008.webp");
+  }
+  18.7497% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-009.webp");
+  }
+  20.833% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-010.webp");
+  }
+  22.9163% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-011.webp");
+  }
+  24.9996% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-012.webp");
+  }
+  27.0829% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-013.webp");
+  }
+  29.1662% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-014.webp");
+  }
+  31.2495% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-015.webp");
+  }
+  33.3328% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-016.webp");
+  }
+  35.4161% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-017.webp");
+  }
+  37.4994% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-018.webp");
+  }
+  39.5827% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-019.webp");
+  }
+  41.666% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-020.webp");
+  }
+  43.7493% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-021.webp");
+  }
+  45.8326% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-022.webp");
+  }
+  47.9159% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-023.webp");
+  }
+  49.9992% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-024.webp");
+  }
+  52.0825% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-025.webp");
+  }
+  54.1658% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-026.webp");
+  }
+  56.2491% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-027.webp");
+  }
+  58.3324% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-028.webp");
+  }
+  60.4157% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-029.webp");
+  }
+  62.499% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-030.webp");
+  }
+  64.5823% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-031.webp");
+  }
+  66.6656% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-032.webp");
+  }
+  68.7489% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-033.webp");
+  }
+  70.8322% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-034.webp");
+  }
+  72.9155% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-035.webp");
+  }
+  74.9988% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-036.webp");
+  }
+  77.0821% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-037.webp");
+  }
+  79.1654% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-038.webp");
+  }
+  81.2487% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-039.webp");
+  }
+  83.332% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-040.webp");
+  }
+  85.4153% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-041.webp");
+  }
+  87.4986% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-042.webp");
+  }
+  89.5819% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-043.webp");
+  }
+  91.6652% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-044.webp");
+  }
+  93.7485% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-045.webp");
+  }
+  95.8318% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-046.webp");
+  }
+  100% {
+    background-size: 600px;
+    background-image: url("../main_page/vision/home-hero-sq-047.webp");
+  }
+}
+main .vision.on b {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .LATEST_NEWS {
+  padding: 5vw 0;
+  overflow: hidden;
+}
+main .LATEST_NEWS h3 {
+  font-family: "acumin-pro-condensed";
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 900;
+  color: rgb(255, 95, 0);
+  margin: 2vw 12.5vw;
+  padding: 0 80px;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .LATEST_NEWS h3.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .LATEST_NEWS .slider {
+  padding: 30px 0;
+  animation-name: infiniteScroll;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+main .LATEST_NEWS .slider:hover {
+  animation-play-state: paused;
+}
+@keyframes infiniteScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-4440px);
+  }
+}
+main .LATEST_NEWS .slider .swiper-wrapper {
+  transition-timing-function: linear;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .LATEST_NEWS .slider .swiper-wrapper.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .LATEST_NEWS .slider div {
+  display: flex;
+}
+main .LATEST_NEWS .slider div .content {
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  margin: 0;
+  width: 30vw;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+main .LATEST_NEWS .slider div .content:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .LATEST_NEWS .slider div .content figure {
+  width: 100%;
+}
+main .LATEST_NEWS .slider div .content figure img {
+  width: 100%;
+  height: 200px;
+}
+main .LATEST_NEWS .slider div .content figure .text {
+  font-family: "Proxima Nova Extrabold";
+}
+main .LATEST_NEWS .slider div .content figure .text p {
+  font-family: "Pretendard ExtraBold";
+  position: absolute;
+  left: 5%;
+  top: 60%;
+}
+main .LATEST_NEWS .slider div .content figure .text ul li {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+main .LATEST_NEWS .slider div .content figure .text ul li a {
+  font-size: 12px;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 5.5px 12px 5.5px 12px;
+  color: white;
+  background-color: rgb(255, 130, 0);
+  border-radius: 38px;
+  font-family: "Proxima Nova Extrabold";
+}
+main .LATEST_NEWS button {
+  margin: 30px 16.5vw;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .LATEST_NEWS button.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .OUR_GAMES {
+  margin-top: 150px;
+  padding: 0 80px;
+}
+main .OUR_GAMES h3 {
+  font-family: "acumin-pro-condensed";
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 900;
+  color: rgb(255, 95, 0);
+  padding: 0 12.25vw;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .OUR_GAMES h3.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .OUR_GAMES .list {
+  padding: 0 12.25vw;
+}
+main .OUR_GAMES .list div.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .OUR_GAMES .list div {
+  margin-bottom: 30px;
+  position: relative;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .OUR_GAMES .list div .shadow {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+main .OUR_GAMES .list div video {
+  border-radius: 10px;
+}
+main .OUR_GAMES .list div .text_box {
+  color: white;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  text-align: center;
+}
+main .OUR_GAMES .list div .text_box p img {
+  width: 270px;
+}
+main .OUR_GAMES .list div .text_box figcaption {
+  font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+main .OUR_GAMES .list div .text_box figcaption p {
+  white-space: pre-line;
+  font-family: "Pretendard SemiBold";
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+main .OUR_GAMES .list div .text_box figcaption .icon img {
+  margin: 10px;
+}
+main .OUR_GAMES .list div a {
+  position: absolute;
+  right: -16px;
+  top: 25px;
+  padding: 16px;
+  background-color: rgb(255, 95, 0);
+  transform-origin: 100% 100%;
+  transform: skew(-10deg);
+}
+main .OUR_GAMES .list div a span {
+  color: white;
+  font-family: "Proxima Nova Extrabold";
+}
+main .OUR_GAMES .list button {
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .OUR_GAMES .list button.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .STUDIOS {
+  margin-top: 150px;
+  padding: 0 80px;
+}
+main .STUDIOS h3 {
+  padding: 2vw 12.25vw;
+  font-family: "acumin-pro-condensed";
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 900;
+  color: rgb(255, 95, 0);
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .STUDIOS h3.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .STUDIOS div {
+  width: 100%;
+  padding: 0px 12.25vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+main .STUDIOS div .s-content {
+  width: 32%;
+  text-align: center;
+  padding: 1.5vw;
+  margin: 0;
+  border-radius: 10px;
+  transform: translateY(30%);
+  opacity: 0;
+}
+main .STUDIOS div .s-content:nth-of-type(1).on {
+  transform: translateY(0%);
+  transition: 0.7s;
+  opacity: 1;
+}
+main .STUDIOS div .s-content:nth-of-type(2).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.1s;
+}
+main .STUDIOS div .s-content:nth-of-type(3).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.2s;
+}
+main .STUDIOS div .s-content:nth-of-type(1) {
+  background-color: #ffe7c4;
+}
+main .STUDIOS div .s-content:nth-of-type(1):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .STUDIOS div .s-content:nth-of-type(2) {
+  background-color: #ff4347;
+}
+main .STUDIOS div .s-content:nth-of-type(2):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .STUDIOS div .s-content:nth-of-type(3) {
+  background-color: #202121;
+}
+main .STUDIOS div .s-content:nth-of-type(3):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .STUDIOS div .s-content:nth-of-type(1) figcaption {
+  color: rgb(90, 27, 0);
+  border-top: 1px solid rgb(211, 80, 4);
+}
+main .STUDIOS div .s-content:nth-of-type(2) figcaption {
+  color: white;
+  border-top: 1px solid white;
+}
+main .STUDIOS div .s-content:nth-of-type(3) figcaption {
+  color: white;
+  border-top: 1px solid white;
+}
+main .STUDIOS div .s-content a {
+  margin: 0 auto;
+}
+main .STUDIOS div .s-content a figure img {
+  padding: 23px 0 49px;
+  width: 80%;
+}
+main .STUDIOS div .s-content a figure figcaption {
+  padding: 10px;
+}
+main .STUDIOS div .s-content a figure figcaption b {
+  font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+  font-size: 24px;
+  margin-top: 10px;
+}
+main .STUDIOS div .s-content a figure figcaption p {
+  font-family: "Pretendard SemiBold";
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+main .OUR_STORIES {
+  padding: 0 12.5vw;
+}
+main .OUR_STORIES h3 {
+  font-family: "acumin-pro-condensed";
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 900;
+  color: rgb(255, 95, 0);
+  padding: 100px 80px 30px;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .OUR_STORIES h3.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .OUR_STORIES .os-content {
+  padding: 0 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .OUR_STORIES .os-content div {
+  position: relative;
+  margin: 10px 16px;
+  transform: translateY(30%);
+  opacity: 0;
+}
+main .OUR_STORIES .os-content div:nth-of-type(1).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+}
+main .OUR_STORIES .os-content div:nth-of-type(2).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.1s;
+}
+main .OUR_STORIES .os-content div:nth-of-type(3).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.2s;
+}
+main .OUR_STORIES .os-content div:nth-of-type(4).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.3s;
+}
+main .OUR_STORIES .os-content div:nth-of-type(1):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .OUR_STORIES .os-content div:nth-of-type(2):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .OUR_STORIES .os-content div:nth-of-type(3):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .OUR_STORIES .os-content div:nth-of-type(4):hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  overflow: hidden;
+}
+main .OUR_STORIES .os-content div figure {
+  width: 14vw;
+  height: 14vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .OUR_STORIES .os-content div figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .OUR_STORIES .os-content div figure figcaption {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  white-space: pre-line;
+}
+main .OUR_STORIES .os-content div figure figcaption p {
+  font-family: "Pretendard ExtraBold";
+  color: white;
+  font-size: 16px;
+}
+main .OUR_STORIES .os-content div figure figcaption a {
+  font-size: 12px;
+  display: inline-block;
+  margin: 3px 0;
+  padding: 5.5px 12px 5.5px 12px;
+  color: white;
+  background-color: rgb(255, 130, 0);
+  border-radius: 38px;
+  font-family: "Proxima Nova Extrabold";
+}
+main .OUR_STORIES button {
+  margin: 30px 80px;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .OUR_STORIES button.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .icon_g {
+  padding: 96px 80px;
+  margin: 0 12.5vw;
+}
+main .icon_g span {
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(229, 229, 229);
+}
+main .icon_g .icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8% 0;
+}
+main .icon_g .icon .i-content {
+  text-align: center;
+  width: 30%;
+  transform: translateY(30%);
+  opacity: 0;
+}
+main .icon_g .icon .i-content:nth-of-type(1).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+}
+main .icon_g .icon .i-content:nth-of-type(2).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.1s;
+}
+main .icon_g .icon .i-content:nth-of-type(3).on {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: 0.7s;
+  transition-delay: 0.2s;
+}
+main .icon_g .icon .i-content figure:hover figcaption {
+  transform: translateY(-5px);
+  transition: 0.5s;
+  color: #ff5f00;
+}
+main .icon_g .icon .i-content figure figcaption h5 {
+  margin: 0;
+  font-family: "Proxima Nova Extrabold";
+  font-size: 28px;
+  line-height: 1.5;
+}
+main .icon_g .icon .i-content figure figcaption p {
+  white-space: pre-line;
+  font-family: "Pretendard SemiBold";
+  line-height: 1.5;
+}
+main .card {
+  position: relative;
+  padding: 0 80px;
+  margin: 5vw 12.5vw;
+}
+main .card figure {
+  width: 100%;
+  background-color: rgb(248, 232, 218);
+  padding: 52px 80px 58px;
+  border-radius: 8px;
+}
+main .card figure img {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  transition: 0.7s;
+  opacity: 0;
+}
+main .card figure img.on {
+  opacity: 1;
+}
+main .card figure figcaption h4 {
+  white-space: pre-line;
+  font-family: "acumin-pro-condensed";
+  color: #ff5f00;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 0.8055555556;
+  font-style: italic;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .card figure figcaption h4.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .card figure figcaption p {
+  font-family: "Pretendard Medium";
+  font-size: 16px;
+  margin: 20px 0 30px;
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .card figure figcaption p.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+main .card figure figcaption button {
+  transform: translateY(30%);
+  transition: 0.7s;
+  opacity: 0;
+}
+main .card figure figcaption button.on {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+footer {
+  padding: 5vw 12.5vw;
+  background-color: rgb(255, 95, 0);
+  color: white;
+}
+footer .text {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .text .link {
+  width: 80%;
+}
+footer .text .link div {
+  margin-bottom: 10px;
+}
+footer .text .link div:nth-of-type(1) span:nth-of-type(1) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(1) span:nth-of-type(2) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(1) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(2) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(3) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(4) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(5) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(6) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(7) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(8) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(9) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(10) {
+  margin-left: 22px;
+  font-size: 14px;
+  transform: translateY(20%) translateX(-50%) rotate(-90deg);
+}
+footer .text .link div:nth-of-type(2) span:nth-of-type(11) {
+  margin: 0;
+  font-size: 14px;
+  transform: translateY(25%);
+}
+footer .text .link div:nth-of-type(2) a:nth-of-type(2) {
+  font-family: "Pretendard ExtraBold";
+  font-size: 15px;
+  line-height: 15px;
+}
+footer .text .link div a {
+  color: white;
+  font-family: "Pretendard Medium";
+  font-size: 14px;
+  line-height: 14px;
+}
+footer .text .link div .material-symbols-outlined {
+  font-size: 10px;
+}
+footer .text form select {
+  width: 180px;
+  padding: 5px 0;
+  appearance: none;
+  color: white;
+  border-width: 0;
+  border-bottom: 2px solid white;
+  font-size: 14px;
+  font-family: "Proxima Nova Extrabold";
+  background-color: transparent;
+  background: url(../icons/arrow_drop.svg) no-repeat 95% 50%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+footer .text form select option {
+  background: rgb(255, 95, 0);
+  color: #fff;
+  padding: 3px 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+footer .b-text {
+  padding: 0 80px;
+}
+footer .b-text strong {
+  display: block;
+  padding-top: 110px;
+  font-size: 160px;
+  font-family: "Proxima Nova Extrabold";
+}
+footer .b-text div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .b-text div p {
+  font-family: "Pretendard Medium";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+footer .b-text div figure {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer .b-text div figure a {
+  margin: 0 10px;
+}
+body, p, figure, h2, h3, h4, h5, div {
+  margin: 0px;
+}
+
+body {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  word-break: keep-all;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img, video {
+  vertical-align: middle;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Acumin Pro-Ultra Black";
+  src: url("../fonts/FontsFree-Net-Acumin-Pro-UltraBlack.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova Extrabold";
+  src: url("../fonts/FontsFree-Net-Proxima-Nova-Xbold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard Black";
+  src: url("../fonts/Pretendard-Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard Medium";
+  src: url("../fonts/Pretendard-Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard SemiBold";
+  src: url("../fonts/Pretendard-SemiBold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard ExtraBold";
+  src: url("../fonts/Pretendard-ExtraBold.otf") format("truetype");
+}
+* button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-family: "Proxima Nova Extrabold";
+  font-size: 15.5px;
+  padding: 16px 24px;
+  border-radius: 36px;
+}
+* button span {
+  padding-left: 8px;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  header {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    width: 100%;
+  }
+  header .bi.active {
+    background-color: rgba(255, 95, 0, 0.8);
+  }
+  header .bi {
+    overflow: hidden;
+    transition: 0.3s;
+    height: 40px;
+  }
+  header .bi .head {
+    padding: 0 6.25vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Proxima Nova Extrabold";
+    font-weight: 800;
+  }
+  header .bi .head h2 {
+    font-size: 1.5vw;
+    display: inline-block;
+    color: white;
+    width: 15%;
+    padding: 10px 0;
+  }
+  header .bi .head .active {
+    display: none;
+  }
+  header .bi .head div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .bi .head div li {
+    position: relative;
+    float: left;
+    width: 20%;
+  }
+  header .bi .head div li:nth-of-type(2) .bar li:nth-of-type(1) a {
+    color: #ffd500;
+    font-size: 1.09375vw;
+  }
+  header .bi .head div li:nth-of-type(2) .bar li:nth-of-type(6) a {
+    margin-top: 10px;
+    color: #ffd500;
+    font-size: 1.09375vw;
+  }
+  header .bi .head div li:nth-of-type(9) {
+    display: none;
+  }
+  header .bi .head div li a {
+    display: block;
+    padding: 0;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.09375vw;
+    color: white;
+  }
+  header .bi .head div li a span {
+    font-size: 1vw;
+    font-weight: bold;
+  }
+  header .bi .head div li .bar {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  header .bi .head div li .bar li {
+    display: block;
+    width: 100%;
+  }
+  header .bi .head div li .bar li a {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    font-size: 0.9vw;
+  }
+  main .vi figure {
+    width: 100%;
+    position: relative;
+  }
+  main .vi figure video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 44.27vw;
+  }
+  main .vi figure figcaption {
+    position: absolute;
+    left: 8%;
+    bottom: 8%;
+    white-space: pre-line;
+    font-family: "acumin-pro-condensed";
+    font-style: italic;
+    font-size: 10vw;
+    font-weight: 900;
+    line-height: 7.96875vw;
+    letter-spacing: -2px;
+    color: rgb(255, 95, 0);
+  }
+  main .vi figure figcaption span {
+    color: white;
+    text-shadow: 3px 3px 0 rgb(255, 95, 0);
+  }
+  main .vi figure .scroll {
+    width: 32px;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+  }
+  main .vi figure .scroll p {
+    margin: 0 auto;
+    width: 20px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  main .vi figure .scroll p span {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 3px auto 0;
+    overflow: hidden;
+  }
+  main .vi figure .scroll p span img {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    margin: 0 auto;
+    animation-name: down-ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes down-ani {
+    0% {
+      transform: translate3d(0%, -100%, 0);
+    }
+    100% {
+      transform: translate3d(0%, 100%, 0);
+    }
+  }
+  main .vi figure .scroll span {
+    display: inline-block;
+    font-size: 10px;
+    color: white;
+  }
+  main .vision {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+  }
+  main .vision b {
+    width: 43vw;
+    white-space: pre-line;
+    text-align: left;
+    font-size: 1.875vw;
+    line-height: 1.5;
+    font-family: "Pretendard ExtraBold";
+  }
+  main .vision b span {
+    color: rgb(255, 95, 0);
+  }
+  main .vision p {
+    width: 45vw;
+    height: 30.25vw;
+    background-repeat: no-repeat;
+    animation: ani 2s linear infinite;
+  }
+  @keyframes ani {
+    0% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-000.webp");
+    }
+    2.0833% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-001.webp");
+    }
+    4.1666% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-002.webp");
+    }
+    6.2499% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-003.webp");
+    }
+    8.3332% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-004.webp");
+    }
+    10.4165% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-005.webp");
+    }
+    12.4998% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-006.webp");
+    }
+    14.5831% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-007.webp");
+    }
+    16.6664% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-008.webp");
+    }
+    18.7497% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-009.webp");
+    }
+    20.833% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-010.webp");
+    }
+    22.9163% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-011.webp");
+    }
+    24.9996% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-012.webp");
+    }
+    27.0829% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-013.webp");
+    }
+    29.1662% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-014.webp");
+    }
+    31.2495% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-015.webp");
+    }
+    33.3328% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-016.webp");
+    }
+    35.4161% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-017.webp");
+    }
+    37.4994% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-018.webp");
+    }
+    39.5827% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-019.webp");
+    }
+    41.666% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-020.webp");
+    }
+    43.7493% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-021.webp");
+    }
+    45.8326% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-022.webp");
+    }
+    47.9159% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-023.webp");
+    }
+    49.9992% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-024.webp");
+    }
+    52.0825% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-025.webp");
+    }
+    54.1658% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-026.webp");
+    }
+    56.2491% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-027.webp");
+    }
+    58.3324% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-028.webp");
+    }
+    60.4157% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-029.webp");
+    }
+    62.499% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-030.webp");
+    }
+    64.5823% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-031.webp");
+    }
+    66.6656% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-032.webp");
+    }
+    68.7489% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-033.webp");
+    }
+    70.8322% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-034.webp");
+    }
+    72.9155% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-035.webp");
+    }
+    74.9988% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-036.webp");
+    }
+    77.0821% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-037.webp");
+    }
+    79.1654% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-038.webp");
+    }
+    81.2487% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-039.webp");
+    }
+    83.332% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-040.webp");
+    }
+    85.4153% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-041.webp");
+    }
+    87.4986% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-042.webp");
+    }
+    89.5819% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-043.webp");
+    }
+    91.6652% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-044.webp");
+    }
+    93.7485% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-045.webp");
+    }
+    95.8318% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-046.webp");
+    }
+    100% {
+      background-size: 45vw;
+      background-image: url("../main_page/vision/home-hero-sq-047.webp");
+    }
+  }
+  main .LATEST_NEWS {
+    margin-top: 150px;
+    overflow: hidden;
+  }
+  main .LATEST_NEWS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 7.03125vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 0 6.25vw;
+    margin: 0;
+  }
+  main .LATEST_NEWS .slider {
+    animation-name: infiniteScroll;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  main .LATEST_NEWS .slider:hover {
+    animation-play-state: paused;
+  }
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-4440px);
+    }
+  }
+  main .LATEST_NEWS .slider .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  main .LATEST_NEWS .slider div {
+    display: flex;
+  }
+  main .LATEST_NEWS .slider div .content {
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    margin: 0;
+    width: 30vw;
+    height: 30vw;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  main .LATEST_NEWS .slider div .content:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  main .LATEST_NEWS .slider div .content figure {
+    width: 100%;
+  }
+  main .LATEST_NEWS .slider div .content figure img {
+    width: 100%;
+    height: 15vw;
+  }
+  main .LATEST_NEWS .slider div .content figure .text {
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .LATEST_NEWS .slider div .content figure .text p {
+    font-family: "Pretendard ExtraBold";
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    font-size: 1.25vw;
+    line-height: 1.5;
+    height: 13.671875vw;
+    padding: 1.5625vw;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul {
+    height: 9.2vw;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul li {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul li a {
+    font-size: 0.9375vw;
+    display: inline-block;
+    margin: 4px;
+    padding: 0.390625vw 0.9375vw;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .LATEST_NEWS button {
+    font-size: 1.25vw;
+    line-height: 1.5;
+    padding: 12px 24px;
+    margin: 3vw 6.25vw;
+  }
+  main .OUR_GAMES {
+    margin-top: 0;
+    padding: 96px 0;
+  }
+  main .OUR_GAMES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 7.03125vw;
+    font-style: italic;
+    font-weight: 900;
+    padding: 0 6.25vw;
+    margin: 2vw 0;
+    color: rgb(255, 95, 0);
+  }
+  main .OUR_GAMES .list {
+    padding: 0 6.25vw;
+  }
+  main .OUR_GAMES .list div {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  main .OUR_GAMES .list div .shadow {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  main .OUR_GAMES .list div video {
+    border-radius: 10px;
+  }
+  main .OUR_GAMES .list div .text_box {
+    color: white;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    text-align: center;
+  }
+  main .OUR_GAMES .list div .text_box p img {
+    width: 270px;
+  }
+  main .OUR_GAMES .list div .text_box figcaption {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 1.875vw;
+    line-height: 1.5;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+  main .OUR_GAMES .list div .text_box figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.25vw;
+    line-height: 1.5;
+  }
+  main .OUR_GAMES .list div .text_box figcaption .icon img {
+    margin: 4px;
+  }
+  main .OUR_GAMES .list div a {
+    position: absolute;
+    right: -16px;
+    top: 25px;
+    padding: 16px;
+    background-color: rgb(255, 95, 0);
+    transform-origin: 100% 100%;
+    transform: skew(-10deg);
+  }
+  main .OUR_GAMES .list div a span {
+    color: white;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .OUR_GAMES .list button {
+    font-size: 1.25vw;
+    line-height: 1.5;
+    padding: 12px 24px;
+  }
+  main .STUDIOS {
+    margin: 0;
+    padding: 0 6.25vw;
+  }
+  main .STUDIOS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 7.03125vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 2vw 0;
+    margin: 0;
+  }
+  main .STUDIOS div {
+    width: 87vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  main .STUDIOS div .s-content {
+    margin: 0;
+    width: 27vw;
+    height: 20%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) {
+    background-color: #ffe7c4;
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) {
+    background-color: #ff4347;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) {
+    background-color: #202121;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) figcaption {
+    color: rgb(90, 27, 0);
+    border-top: 1px solid rgb(211, 80, 4);
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  main .STUDIOS div .s-content a figure img {
+    margin: 0;
+    padding: 23px 0 45px;
+    width: 80%;
+  }
+  main .STUDIOS div .s-content a figure figcaption {
+    height: 18vh;
+    padding: 24px 0;
+    white-space: pre-line;
+  }
+  main .STUDIOS div .s-content a figure figcaption b {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 1.875vw;
+  }
+  main .STUDIOS div .s-content a figure figcaption p {
+    font-family: "Pretendard SemiBold";
+    font-size: 1.25vw;
+    margin-top: 5%;
+    line-height: 1.5;
+  }
+  main .OUR_STORIES {
+    margin: 0;
+    padding: 0 6.25vw;
+  }
+  main .OUR_STORIES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 7.03125vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 2vw 0;
+  }
+  main .OUR_STORIES .os-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  main .OUR_STORIES .os-content div {
+    position: relative;
+    margin: 0;
+  }
+  main .OUR_STORIES .os-content div:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  main .OUR_STORIES .os-content div figure {
+    width: 20vw;
+    height: 20vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  main .OUR_STORIES .os-content div figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .OUR_STORIES .os-content div figure figcaption {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    white-space: pre-line;
+  }
+  main .OUR_STORIES .os-content div figure figcaption p {
+    font-family: "Pretendard ExtraBold";
+    color: white;
+    font-size: 1.25vw;
+  }
+  main .OUR_STORIES .os-content div figure figcaption a {
+    font-size: 0.9375vw;
+    display: inline-block;
+    margin: 3px 0;
+    padding: 0.390625vw 0.9375vw;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .OUR_STORIES button {
+    padding: 12px 24px;
+    font-size: 1.25vw;
+    line-height: 1.5;
+    margin: 30px 0;
+  }
+  main .icon_g {
+    padding: 96px 30px;
+    margin-top: 150px;
+    margin: 0;
+  }
+  main .icon_g span {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(229, 229, 229);
+  }
+  main .icon_g .icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8% 0;
+  }
+  main .icon_g .icon .i-content {
+    text-align: center;
+    width: 100%;
+  }
+  main .icon_g .icon .i-content figure figcaption h5 {
+    margin: 0;
+    font-family: "Proxima Nova Extrabold";
+    font-size: 2.1875vw;
+    line-height: 1.2857142857;
+  }
+  main .icon_g .icon .i-content figure figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.25vw;
+    line-height: 1.5;
+  }
+  main .card {
+    margin: 0;
+    position: relative;
+    padding: 7.5vw 6.25vw;
+  }
+  main .card figure {
+    width: 100%;
+    background-color: rgb(248, 232, 218);
+    padding: 52px 80px 58px;
+    border-radius: 8px;
+  }
+  main .card figure img {
+    width: 30%;
+    position: absolute;
+    right: 16%;
+    bottom: 15%;
+  }
+  main .card figure figcaption h4 {
+    white-space: pre-line;
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    line-height: 58px;
+    font-weight: 900;
+    font-size: 5.625vw;
+    font-style: italic;
+  }
+  main .card figure figcaption p {
+    font-family: "Pretendard Medium";
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 30px 0;
+  }
+  main .card figure figcaption button {
+    font-size: 1.25vw;
+    line-height: 1.5;
+  }
+  footer {
+    width: 100%;
+    padding: 6% 6%;
+    background-color: rgb(255, 95, 0);
+    color: white;
+  }
+  footer .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  footer .text .link div {
+    margin-bottom: 10px;
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(1) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(1) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(3) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(4) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(5) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(6) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(7) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(8) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(9) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(10) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(11) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) a:nth-of-type(2) {
+    font-family: "Pretendard ExtraBold";
+    font-size: 1.171875vw;
+    line-height: 15px;
+  }
+  footer .text .link div a {
+    color: white;
+    font-family: "Pretendard Medium";
+    font-size: 1.09375vw;
+    line-height: 14px;
+  }
+  footer .text .link div .material-symbols-outlined {
+    font-size: 10px;
+  }
+  footer .text form select {
+    width: 180px;
+    padding: 5px 0;
+    appearance: none;
+    color: white;
+    border-width: 0;
+    border-bottom: 2px solid white;
+    font-size: 1.09375vw;
+    font-family: "Proxima Nova Extrabold";
+    background-color: transparent;
+    background: url(../icons/arrow_drop.svg) no-repeat 95% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  footer .text form select option {
+    background: rgb(255, 95, 0);
+    color: #fff;
+    padding: 3px 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  footer .b-text {
+    padding: 0;
+  }
+  footer .b-text strong {
+    display: block;
+    padding-top: 110px;
+    letter-spacing: -5px;
+    font-size: 13vw;
+    font-family: "Proxima Nova Extrabold";
+  }
+  footer .b-text div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .b-text div p {
+    font-family: "Pretendard Medium";
+    font-size: 1.09375vw;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  footer .b-text div figure {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  footer .b-text div figure a {
+    margin: 0 10px;
+  }
+}
+@media (min-width: 720px) and (max-width: 1023px) {
+  .bi .headactive {
+    width: 100%;
+    height: 100%;
+    background-color: #ff5f00;
+    color: white;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: 1s;
+    position: fixed;
+    z-index: 1;
+  }
+  .bi .headactive h2 {
+    padding: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+    font-family: "Proxima Nova Extrabold";
+  }
+  .bi .headactive .active {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 3%;
+    top: 1.5%;
+  }
+  .bi .headactive > div {
+    margin-top: 5.95703125vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bi .headactive > div > li {
+    width: 100%;
+    margin-bottom: 1vw;
+  }
+  .bi .headactive > div > li:nth-of-type(2) .bar li:nth-of-type(1) a {
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  .bi .headactive > div > li:nth-of-type(2) .bar li:nth-of-type(6) a {
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  .bi .headactive > div > li:nth-of-type(2) .bar li:nth-of-type(6) {
+    margin-top: 50px;
+  }
+  .bi .headactive > div > li:nth-of-type(8) a {
+    display: none;
+  }
+  .bi .headactive > div > li:nth-of-type(9) {
+    margin: 30vh 0 64px 0;
+  }
+  .bi .headactive > div > li > a {
+    margin: 0 1.953125vw 2.734375vw 1.953125vw;
+    color: white;
+    font-family: "acumin-pro-condensed";
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  .bi .headactive > div > li > a span {
+    font-weight: 900;
+  }
+  .bi .headactive > div > li > a > div {
+    margin-left: 1vw;
+    display: inline-block;
+  }
+  .bi .headactive > div > li b {
+    color: white;
+    font-size: 32px;
+  }
+  .bi .headactive > div > li .bar {
+    display: none;
+    margin: 2.734375vw;
+    background-color: rgb(248, 232, 218);
+    padding: 30px 0 30px 20px;
+    color: #ff5f00;
+  }
+  .bi .headactive > div > li .bar li {
+    margin: 0 0 1vw 0;
+  }
+  .bi .headactive > div > li .bar a {
+    font-family: "Pretendard ExtraBold";
+    color: #ff5f00;
+    font-size: 18px;
+  }
+  .bi .head {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    padding: 0 3.125vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Proxima Nova Extrabold";
+    font-weight: 800;
+  }
+  .bi .head h2 {
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .bi .head .active {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .bi .head .active > span {
+    color: white;
+  }
+  .bi .head div {
+    display: none;
+  }
+  .bi .head div li {
+    position: relative;
+    float: left;
+  }
+  .bi .head div li a {
+    display: block;
+    padding: 0 15px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: white;
+  }
+  .bi .head div li .bar {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .bi .head div li .bar li a {
+    display: block;
+  }
+  main .vi figure {
+    width: 100%;
+    position: relative;
+  }
+  main .vi figure video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .vi figure figcaption {
+    position: absolute;
+    left: 4%;
+    bottom: 6%;
+    white-space: pre-line;
+    font-family: "acumin-pro-condensed";
+    font-style: italic;
+    font-size: 12.5vw;
+    font-weight: 900;
+    line-height: 9.9609375vw;
+    letter-spacing: -2px;
+    color: rgb(255, 95, 0);
+  }
+  main .vi figure figcaption span {
+    color: white;
+    text-shadow: 3px 3px 0 rgb(255, 95, 0);
+  }
+  main .vi figure .scroll {
+    width: 32px;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+  }
+  main .vi figure .scroll p {
+    margin: 0 auto;
+    width: 20px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  main .vi figure .scroll p span {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 3px auto 0;
+    overflow: hidden;
+  }
+  main .vi figure .scroll p span img {
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    margin: 0 auto;
+    animation-name: down-ani;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes down-ani {
+    0% {
+      transform: translate3d(0%, -100%, 0);
+    }
+    100% {
+      transform: translate3d(0%, 100%, 0);
+    }
+  }
+  main .vi figure .scroll span {
+    display: inline-block;
+    font-size: 10px;
+    color: white;
+  }
+  main .vision {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 3% auto;
+  }
+  main .vision b {
+    width: 28%;
+    line-height: 1.5;
+    white-space: pre-line;
+    font-size: 2.34375vw;
+    font-family: "Pretendard ExtraBold";
+  }
+  main .vision b span {
+    color: rgb(255, 95, 0);
+  }
+  main .vision p {
+    width: 54.00390625vw;
+    height: 31.25vw;
+    background-repeat: no-repeat;
+    animation: ani 2s linear infinite;
+  }
+  @keyframes ani {
+    0% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-000.webp");
+    }
+    2.0833% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-001.webp");
+    }
+    4.1666% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-002.webp");
+    }
+    6.2499% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-003.webp");
+    }
+    8.3332% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-004.webp");
+    }
+    10.4165% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-005.webp");
+    }
+    12.4998% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-006.webp");
+    }
+    14.5831% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-007.webp");
+    }
+    16.6664% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-008.webp");
+    }
+    18.7497% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-009.webp");
+    }
+    20.833% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-010.webp");
+    }
+    22.9163% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-011.webp");
+    }
+    24.9996% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-012.webp");
+    }
+    27.0829% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-013.webp");
+    }
+    29.1662% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-014.webp");
+    }
+    31.2495% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-015.webp");
+    }
+    33.3328% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-016.webp");
+    }
+    35.4161% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-017.webp");
+    }
+    37.4994% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-018.webp");
+    }
+    39.5827% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-019.webp");
+    }
+    41.666% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-020.webp");
+    }
+    43.7493% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-021.webp");
+    }
+    45.8326% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-022.webp");
+    }
+    47.9159% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-023.webp");
+    }
+    49.9992% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-024.webp");
+    }
+    52.0825% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-025.webp");
+    }
+    54.1658% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-026.webp");
+    }
+    56.2491% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-027.webp");
+    }
+    58.3324% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-028.webp");
+    }
+    60.4157% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-029.webp");
+    }
+    62.499% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-030.webp");
+    }
+    64.5823% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-031.webp");
+    }
+    66.6656% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-032.webp");
+    }
+    68.7489% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-033.webp");
+    }
+    70.8322% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-034.webp");
+    }
+    72.9155% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-035.webp");
+    }
+    74.9988% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-036.webp");
+    }
+    77.0821% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-037.webp");
+    }
+    79.1654% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-038.webp");
+    }
+    81.2487% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-039.webp");
+    }
+    83.332% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-040.webp");
+    }
+    85.4153% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-041.webp");
+    }
+    87.4986% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-042.webp");
+    }
+    89.5819% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-043.webp");
+    }
+    91.6652% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-044.webp");
+    }
+    93.7485% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-045.webp");
+    }
+    95.8318% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-046.webp");
+    }
+    100% {
+      background-size: 100%;
+      background-image: url("../main_page/vision/home-hero-sq-047.webp");
+    }
+  }
+  main .LATEST_NEWS {
+    margin-top: 100px;
+    overflow: hidden;
+    padding: 0 3.125vw;
+  }
+  main .LATEST_NEWS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 8.7890625vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    margin: 1% 0%;
+    padding: 0;
+  }
+  main .LATEST_NEWS .slider {
+    animation-name: infiniteScroll;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  main .LATEST_NEWS .slider:hover {
+    animation-play-state: paused;
+  }
+  @keyframes infiniteScroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-4440px);
+    }
+  }
+  main .LATEST_NEWS .slider div {
+    display: flex;
+  }
+  main .LATEST_NEWS .slider div .content {
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 30vw;
+    height: 40vw;
+    flex-shrink: 0;
+    position: relative;
+  }
+  main .LATEST_NEWS .slider div .content:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  main .LATEST_NEWS .slider div .content figure {
+    width: 100%;
+  }
+  main .LATEST_NEWS .slider div .content figure img {
+    width: 100%;
+    height: 20vw;
+  }
+  main .LATEST_NEWS .slider div .content figure .text {
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .LATEST_NEWS .slider div .content figure .text p {
+    font-size: 1.5625vw;
+    font-family: "Pretendard ExtraBold";
+    position: absolute;
+    left: 5%;
+    top: 52%;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul li {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul li a {
+    font-size: 1.171875vw;
+    display: inline-block;
+    padding: 0.48828125vw 1.171875vw;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .LATEST_NEWS button {
+    font-size: 1.5625vw;
+    padding: 1.171875vw 2.34375vw;
+    margin: 3% 3%;
+  }
+  main .OUR_GAMES {
+    padding: 10vw 3.125vw;
+    margin-top: 0;
+  }
+  main .OUR_GAMES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 8.7890625vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    margin: 1% 0%;
+    padding: 0;
+  }
+  main .OUR_GAMES .list {
+    padding: 0;
+  }
+  main .OUR_GAMES .list div {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  main .OUR_GAMES .list div .shadow {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  main .OUR_GAMES .list div video {
+    border-radius: 10px;
+  }
+  main .OUR_GAMES .list div .text_box {
+    width: 40%;
+    color: white;
+    position: absolute;
+    left: 1%;
+    top: 10%;
+    text-align: center;
+  }
+  main .OUR_GAMES .list div .text_box p img {
+    width: 26.3671875vw;
+  }
+  main .OUR_GAMES .list div .text_box figcaption {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 2.34375vw;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+  main .OUR_GAMES .list div .text_box figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.5625vw;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  main .OUR_GAMES .list div .text_box figcaption .icon img {
+    width: 5%;
+    margin: 5px;
+  }
+  main .OUR_GAMES .list div a {
+    position: absolute;
+    right: -10px;
+    top: 25px;
+    padding: 10px;
+    background-color: rgb(255, 95, 0);
+    transform-origin: 100% 100%;
+    transform: skew(-10deg);
+  }
+  main .OUR_GAMES .list div a span {
+    font-size: 1.5625vw;
+    color: white;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .OUR_GAMES .list button {
+    font-size: 11px;
+    padding: 8px 20px;
+    margin: 3% 0%;
+  }
+  main .STUDIOS {
+    margin-top: 150px;
+    margin: 0;
+    padding: 0;
+  }
+  main .STUDIOS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 8.7890625vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    margin: 0;
+    padding: 0 3.125vw;
+  }
+  main .STUDIOS div {
+    margin: 0 auto;
+    padding: 0;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main .STUDIOS div .s-content {
+    margin: 0;
+    width: 30vw;
+    height: 30%;
+    text-align: center;
+    padding: 1.953125vw;
+    border-radius: 10px;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) {
+    background-color: #ffe7c4;
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) {
+    background-color: #ff4347;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) {
+    background-color: #202121;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) figcaption {
+    color: rgb(90, 27, 0);
+    border-top: 1px solid rgb(211, 80, 4);
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content a figure img {
+    padding: 2.24609375vw 0 4.78515625vw;
+    width: 90%;
+    margin: 0;
+  }
+  main .STUDIOS div .s-content a figure figcaption {
+    height: 16vh;
+    padding: 2.34375vw 0;
+    white-space: normal;
+  }
+  main .STUDIOS div .s-content a figure figcaption b {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 2.34375vw;
+  }
+  main .STUDIOS div .s-content a figure figcaption p {
+    font-family: "Pretendard SemiBold";
+    font-size: 1.5625vw;
+    margin: 5% 0%;
+    line-height: 1.5;
+  }
+  main .OUR_STORIES {
+    margin-top: 150px;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+  main .OUR_STORIES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 8.7890625vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    margin-left: 3vw;
+    padding: 0;
+  }
+  main .OUR_STORIES .os-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 1.5vw;
+  }
+  main .OUR_STORIES .os-content div {
+    width: 46vw;
+    height: 46vw;
+    margin: 10px 0px 4vw;
+    position: relative;
+  }
+  main .OUR_STORIES .os-content div figure {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  main .OUR_STORIES .os-content div figure img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  main .OUR_STORIES .os-content div figure figcaption {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+  }
+  main .OUR_STORIES .os-content div figure figcaption p {
+    font-family: "Pretendard ExtraBold";
+    color: white;
+    font-size: 1.5625vw;
+  }
+  main .OUR_STORIES .os-content div figure figcaption a {
+    font-size: 1.171875vw;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 5.5px 12px 5.5px 12px;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .OUR_STORIES button {
+    font-size: 1.5625vw;
+    padding: 1.171875vw 2.34375vw;
+    margin-left: 3vw;
+  }
+  main .icon_g {
+    margin-top: 150px;
+    margin: 0;
+    padding: 10vw 3.125vw;
+  }
+  main .icon_g span {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(229, 229, 229);
+  }
+  main .icon_g .icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8% 0;
+  }
+  main .icon_g .icon .i-content {
+    text-align: center;
+    width: 30%;
+  }
+  main .icon_g .icon .i-content figure {
+    margin: 0 auto;
+  }
+  main .icon_g .icon .i-content figure figcaption h5 {
+    margin: 0;
+    font-family: "Proxima Nova Extrabold";
+    font-size: 2.734375vw;
+    line-height: 1.5;
+  }
+  main .icon_g .icon .i-content figure figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 1.5625vw;
+    line-height: 1.5;
+  }
+  main .card {
+    margin: 0;
+    padding: 0 3.125vw;
+    position: relative;
+  }
+  main .card figure {
+    width: 100%;
+    height: 35vh;
+    background-color: rgb(248, 232, 218);
+    padding: 5.078125vw 7.8125vw 5.6640625vw;
+    border-radius: 8px;
+  }
+  main .card figure img {
+    width: 35%;
+    position: absolute;
+    right: 8%;
+    bottom: 0;
+  }
+  main .card figure figcaption h4 {
+    white-space: pre-line;
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    line-height: 7.03125vw;
+    font-weight: 900;
+    font-size: 7.03125vw;
+    font-style: italic;
+  }
+  main .card figure figcaption p {
+    font-family: "Pretendard Medium";
+    font-size: 1.5625vw;
+    margin: 15px 0;
+  }
+  main .card figure figcaption button {
+    font-size: 1.5625vw;
+    padding: 1.171875vw 2.34375vw;
+  }
+  footer {
+    padding: 8.88671875vw 3.125vw 7.51953125vw;
+    margin-top: 5vw;
+    background-color: rgb(255, 95, 0);
+    color: white;
+  }
+  footer .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  footer .text .link {
+    width: 80%;
+  }
+  footer .text .link div {
+    margin-bottom: 0;
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(1) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(1) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(3) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(4) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(5) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(6) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(7) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(8) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(9) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(10) {
+    margin-left: 22px;
+    font-size: 1.3671875vw;
+    transform: translateY(10%) translateX(-50%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(11) {
+    margin: 0;
+    font-size: 1.3671875vw;
+    transform: translateY(25%);
+  }
+  footer .text .link div:nth-of-type(2) a:nth-of-type(2) {
+    font-family: "Pretendard ExtraBold";
+    font-size: 1.46484375vw;
+    line-height: 15px;
+  }
+  footer .text .link div a {
+    color: white;
+    font-family: "Pretendard Medium";
+    font-size: 1.3671875vw;
+    line-height: 14px;
+  }
+  footer .text .link div .material-symbols-outlined {
+    font-size: 10px;
+  }
+  footer .text form select {
+    width: 100%;
+    padding: 5px 0;
+    appearance: none;
+    color: white;
+    border-width: 0;
+    border-bottom: 2px solid white;
+    font-size: 1.3671875vw;
+    font-family: "Proxima Nova Extrabold";
+    background-color: transparent;
+    background: url(../icons/arrow_drop.svg) no-repeat 95% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  footer .text form select option {
+    background: rgb(255, 95, 0);
+    color: #fff;
+    padding: 3px 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  footer .b-text {
+    padding: 0;
+  }
+  footer .b-text strong {
+    display: block;
+    padding-top: 90px;
+    letter-spacing: -5px;
+    font-size: 13vw;
+    font-family: "Proxima Nova Extrabold";
+  }
+  footer .b-text div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .b-text div p {
+    font-family: "Pretendard Medium";
+    font-size: 1.3671875vw;
+    font-weight: 500;
+    line-height: 1.5714285714;
+    text-transform: uppercase;
+  }
+  footer .b-text div figure {
+    width: 20%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  footer .b-text div figure a {
+    margin: 0 5px;
+  }
+  footer .b-text div figure a img {
+    width: 20%;
+  }
+}
+@media (max-width: 719px) {
+  .bi .headactive {
+    width: 100%;
+    height: 100%;
+    background-color: #ff5f00;
+    color: white;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: 1s;
+    position: fixed;
+    z-index: 1;
+  }
+  .bi .headactive h2 {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+    font-family: "Proxima Nova Extrabold";
+  }
+  .bi .headactive .active {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 3%;
+    top: 1.5%;
+  }
+  .bi .headactive div {
+    height: 100%;
+    margin-top: 0;
+  }
+  .bi .headactive div > li {
+    width: 100%;
+    margin: 6vw 5.5555555556vw 4.1111111111vw 5.5555555556vw;
+  }
+  .bi .headactive div > li:nth-of-type(2) .bar li:nth-of-type(1) a {
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  .bi .headactive div > li:nth-of-type(2) .bar li:nth-of-type(6) a {
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  .bi .headactive div > li:nth-of-type(2) .bar li:nth-of-type(6) {
+    margin-top: 50px;
+  }
+  .bi .headactive div > li:nth-of-type(8) a {
+    display: none;
+  }
+  .bi .headactive div > li:nth-of-type(9) a,
+  .bi .headactive div > li b {
+    font-size: 8.8888888889vw;
+  }
+  .bi .headactive div > li:nth-of-type(9) {
+    display: block;
+    margin: 6vw 5.5555555556vw 6.1111111111vw 5.5555555556vw;
+  }
+  .bi .headactive div > li > a {
+    color: white;
+    font-family: "acumin-pro-condensed";
+    font-style: italic;
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+  .bi .headactive div > li > a span {
+    font-weight: 900;
+  }
+  .bi .headactive div > li > a > div {
+    display: inline-block;
+  }
+  .bi .headactive div > li b {
+    color: white;
+    font-size: 32px;
+  }
+  .bi .headactive div > li .bar {
+    display: none;
+    margin-top: 2.734375vw;
+    background-color: rgb(248, 232, 218);
+    padding: 30px 0 30px 20px;
+    color: #ff5f00;
+  }
+  .bi .headactive div > li .bar li {
+    margin: 0 0 1vw 0;
+  }
+  .bi .headactive div > li .bar a {
+    font-family: "Pretendard ExtraBold";
+    color: #ff5f00;
+    font-size: 18px;
+  }
+  .bi .head {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Proxima Nova Extrabold";
+    font-weight: 800;
+  }
+  .bi .head h2 {
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .bi .head .active {
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .bi .head .active > span {
+    color: white;
+  }
+  .bi .head div {
+    display: none;
+  }
+  .bi .head div li {
+    position: relative;
+    float: left;
+  }
+  .bi .head div li a {
+    display: block;
+    padding: 0 15px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: white;
+  }
+  .bi .head div li .bar {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .bi .head div li .bar li a {
+    display: block;
+  }
+  main .vi figure {
+    width: 100%;
+    position: relative;
+  }
+  main .vi figure video {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .vi figure figcaption {
+    position: absolute;
+    left: 7%;
+    bottom: 14%;
+    white-space: pre-line;
+    font-family: "acumin-pro-condensed";
+    font-style: italic;
+    font-size: 17.7777777778vw;
+    font-weight: 900;
+    line-height: 0.84375;
+    letter-spacing: -2px;
+    color: rgb(255, 95, 0);
+  }
+  main .vi figure figcaption span {
+    color: white;
+    text-shadow: 3px 3px 0 rgb(255, 95, 0);
+  }
+  main .vi figure .scroll {
+    display: none;
+    position: absolute;
+    right: 20%;
+    bottom: 8%;
+  }
+  main .vi figure .scroll p {
+    position: relative;
+    width: 24px;
+    height: 42px;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  main .vi figure .scroll p img {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    margin: 0 auto;
+  }
+  main .vi figure .scroll span {
+    font-size: 10px;
+    color: white;
+  }
+  main .vision {
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  main .vision b {
+    width: 100%;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 5vw;
+    line-height: 1.3333333333;
+    padding: 0 15.9444444444vw;
+    font-family: "Pretendard ExtraBold";
+  }
+  main .vision b span {
+    color: rgb(255, 95, 0);
+  }
+  main .vision p {
+    width: 100%;
+    height: 70vw;
+    animation: ani 2s linear infinite;
+  }
+  @keyframes ani {
+    0% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-000.webp");
+    }
+    2.0833% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-001.webp");
+    }
+    4.1666% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-002.webp");
+    }
+    6.2499% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-003.webp");
+    }
+    8.3332% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-004.webp");
+    }
+    10.4165% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-005.webp");
+    }
+    12.4998% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-006.webp");
+    }
+    14.5831% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-007.webp");
+    }
+    16.6664% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-008.webp");
+    }
+    18.7497% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-009.webp");
+    }
+    20.833% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-010.webp");
+    }
+    22.9163% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-011.webp");
+    }
+    24.9996% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-012.webp");
+    }
+    27.0829% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-013.webp");
+    }
+    29.1662% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-014.webp");
+    }
+    31.2495% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-015.webp");
+    }
+    33.3328% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-016.webp");
+    }
+    35.4161% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-017.webp");
+    }
+    37.4994% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-018.webp");
+    }
+    39.5827% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-019.webp");
+    }
+    41.666% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-020.webp");
+    }
+    43.7493% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-021.webp");
+    }
+    45.8326% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-022.webp");
+    }
+    47.9159% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-023.webp");
+    }
+    49.9992% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-024.webp");
+    }
+    52.0825% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-025.webp");
+    }
+    54.1658% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-026.webp");
+    }
+    56.2491% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-027.webp");
+    }
+    58.3324% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-028.webp");
+    }
+    60.4157% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-029.webp");
+    }
+    62.499% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-030.webp");
+    }
+    64.5823% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-031.webp");
+    }
+    66.6656% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-032.webp");
+    }
+    68.7489% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-033.webp");
+    }
+    70.8322% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-034.webp");
+    }
+    72.9155% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-035.webp");
+    }
+    74.9988% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-036.webp");
+    }
+    77.0821% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-037.webp");
+    }
+    79.1654% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-038.webp");
+    }
+    81.2487% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-039.webp");
+    }
+    83.332% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-040.webp");
+    }
+    85.4153% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-041.webp");
+    }
+    87.4986% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-042.webp");
+    }
+    89.5819% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-043.webp");
+    }
+    91.6652% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-044.webp");
+    }
+    93.7485% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-045.webp");
+    }
+    95.8318% {
+      background-size: 100vw;
+      background-repeat: no-repeat;
+      background-image: url("../main_page/vision/home-hero-sq-046.webp");
+    }
+    100% {
+      background-size: 100vw;
+      background-image: url("../main_page/vision/home-hero-sq-047.webp");
+    }
+  }
+  main .LATEST_NEWS {
+    margin-top: 150px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 5.5555555556vw;
+  }
+  main .LATEST_NEWS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 13.3333333333vw;
+    line-height: 0.7916666667;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 10vw 0;
+    margin: 0;
+  }
+  main .LATEST_NEWS .slider {
+    animation: none;
+  }
+  main .LATEST_NEWS .slider:hover {
+    animation-play-state: paused;
+  }
+  main .LATEST_NEWS .slider div {
+    display: flex;
+  }
+  main .LATEST_NEWS .slider div .content {
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    margin-right: 2vw;
+    width: 90vw;
+    height: 80vh;
+    position: relative;
+  }
+  main .LATEST_NEWS .slider div .content:hover {
+    transform: translateY(-20px);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  main .LATEST_NEWS .slider div .content figure img {
+    width: 90vw;
+    height: 40vh;
+  }
+  main .LATEST_NEWS .slider div .content figure .text {
+    width: 90vw;
+    height: 40vh;
+    font-family: "Proxima Nova Extrabold";
+    padding: 5.5555555556vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  main .LATEST_NEWS .slider div .content figure .text p {
+    width: 80vw;
+    font-family: "Pretendard ExtraBold";
+    font-size: 5vw;
+    line-height: 1.3333333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  main .LATEST_NEWS .slider div .content figure .text ul li a {
+    font-size: 2.7777777778vw;
+    display: inline-block;
+    padding: 1.3888888889vw 3.3333333333vw;
+    margin-right: 1.1111111111vw;
+    margin-top: 1.6666666667vw;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .LATEST_NEWS button {
+    border-radius: 10vw;
+    height: 11.1111111111vw;
+    padding: 2.2222222222vw 6.6666666667vw;
+    font-size: 3.8888888889vw;
+    margin: 10vw 0;
+  }
+  main .OUR_GAMES {
+    margin-top: 200px;
+    padding: 0 5.5555555556vw;
+  }
+  main .OUR_GAMES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 13.3333333333vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 3vw 0;
+  }
+  main .OUR_GAMES .list {
+    padding: 0;
+  }
+  main .OUR_GAMES .list div {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  main .OUR_GAMES .list div .shadow {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 90vw;
+  }
+  main .OUR_GAMES .list div video {
+    border-radius: 10px;
+    width: 90vw;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    vertical-align: middle;
+  }
+  main .OUR_GAMES .list div .text_box {
+    display: inline-block;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: white;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    z-index: 2;
+    text-align: center;
+  }
+  main .OUR_GAMES .list div .text_box p img {
+    width: 80%;
+  }
+  main .OUR_GAMES .list div .text_box figcaption {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 5vw;
+    font-weight: 900;
+    margin-top: 3vw;
+  }
+  main .OUR_GAMES .list div .text_box figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 3.8888888889vw;
+    line-height: 1.4285714286;
+    margin: 10px 0;
+  }
+  main .OUR_GAMES .list div .text_box figcaption .icon img {
+    width: 8%;
+    margin: 10px;
+  }
+  main .OUR_GAMES .list div a {
+    position: absolute;
+    right: -16px;
+    top: 25px;
+    padding: 3.6111111111vw 5.2777777778vw;
+    background-color: rgb(255, 95, 0);
+    transform-origin: 100% 100%;
+    transform: skew(-10deg);
+  }
+  main .OUR_GAMES .list div a span {
+    color: white;
+    font-family: "Proxima Nova Extrabold";
+    font-size: 3.8888888889vw;
+  }
+  main .OUR_GAMES .list button {
+    border-radius: 10vw;
+    height: 11.1111111111vw;
+    padding: 2.2222222222vw 6.6666666667vw;
+    font-size: 3.8888888889vw;
+    margin: 10vw 0;
+  }
+  main .STUDIOS {
+    padding: 18.0555555556vw 0;
+    margin: 0;
+  }
+  main .STUDIOS h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 13.3333333333vw;
+    line-height: 0.7916666667;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+    padding: 11vw 5vw 11vw 5vw;
+    margin: 0;
+  }
+  main .STUDIOS div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 5vw;
+  }
+  main .STUDIOS div .s-content {
+    width: 100%;
+    height: 100vw;
+    text-align: center;
+    padding: 5vw;
+    margin-bottom: 5vw;
+    border-radius: 10px;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) {
+    background-color: #ffe7c4;
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) {
+    background-color: #ff4347;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) {
+    background-color: #202121;
+  }
+  main .STUDIOS div .s-content:nth-of-type(1) figcaption {
+    color: rgb(90, 27, 0);
+    border-top: 1px solid rgb(211, 80, 4);
+  }
+  main .STUDIOS div .s-content:nth-of-type(2) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content:nth-of-type(3) figcaption {
+    color: white;
+    border-top: 1px solid white;
+  }
+  main .STUDIOS div .s-content a {
+    height: 80vw;
+  }
+  main .STUDIOS div .s-content a figure {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .STUDIOS div .s-content a figure img {
+    height: 40vw;
+    width: 100%;
+    padding: 5.8333333333vw 5vw 11.1111111111vw;
+  }
+  main .STUDIOS div .s-content a figure figcaption {
+    display: inline-block;
+    height: 45vw;
+    width: 100%;
+    padding: 5.5555555556vw 0 6.6666666667vw;
+    white-space: pre-line;
+  }
+  main .STUDIOS div .s-content a figure figcaption b {
+    font-family: "Pretendard Black", Dotum, 돋움, 굴림, arial;
+    font-size: 6.6666666667vw;
+  }
+  main .STUDIOS div .s-content a figure figcaption p {
+    font-family: "Pretendard SemiBold";
+    font-size: 3.8888888889vw;
+    margin-top: 30px;
+    line-height: 1.4285714286;
+  }
+  main .OUR_STORIES {
+    padding: 18.0555555556vw 0 17.7777777778vw;
+    margin: 0;
+  }
+  main .OUR_STORIES h3 {
+    font-family: "acumin-pro-condensed";
+    font-size: 13.3333333333vw;
+    line-height: 0.7916666667;
+    padding: 0 5.5555555556vw;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(255, 95, 0);
+  }
+  main .OUR_STORIES .os-content {
+    margin-top: 6.6666666667vw;
+    padding: 0 5.5555555556vw;
+    display: flex;
+    overflow: hidden;
+  }
+  main .OUR_STORIES .os-content div {
+    position: relative;
+    margin-right: 3.5555555556vw;
+  }
+  main .OUR_STORIES .os-content div figure {
+    width: 85vw;
+    height: 85vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  main .OUR_STORIES .os-content div figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .OUR_STORIES .os-content div figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 3.3333333333vw 3.3333333333vw 6.6666666667vw 3.3333333333vw;
+  }
+  main .OUR_STORIES .os-content div figure figcaption p {
+    font-family: "Pretendard ExtraBold";
+    color: white;
+    font-size: 4.4444444444vw;
+  }
+  main .OUR_STORIES .os-content div figure figcaption a {
+    font-size: 2.7777777778vw;
+    display: inline-block;
+    margin: 3px 0;
+    padding: 1.3888888889vw 3.3333333333vw;
+    color: white;
+    background-color: rgb(255, 130, 0);
+    border-radius: 38px;
+    font-family: "Proxima Nova Extrabold";
+  }
+  main .OUR_STORIES button {
+    font-size: 3.8888888889vw;
+    padding: 2.2222222222vw 6.6666666667vw;
+    margin-left: 5.5555555556vw;
+    margin-top: 10vw;
+  }
+  main .icon_g {
+    margin: 0;
+  }
+  main .icon_g span {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(229, 229, 229);
+  }
+  main .icon_g .icon {
+    width: 100%;
+    padding: 14.6666666667vw 3vw 0 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  main .icon_g .icon .i-content {
+    text-align: center;
+    width: 100%;
+    height: 80vw;
+  }
+  main .icon_g .icon .i-content figure svg {
+    width: 50%;
+    height: 50%;
+  }
+  main .icon_g .icon .i-content figure figcaption h5 {
+    margin: 0;
+    font-family: "Proxima Nova Extrabold";
+    font-size: 6.6666666667vw;
+    line-height: 1.5;
+  }
+  main .icon_g .icon .i-content figure figcaption p {
+    white-space: pre-line;
+    font-family: "Pretendard SemiBold";
+    font-size: 3.8888888889vw;
+    line-height: 1.4285714286;
+  }
+  main .card {
+    position: relative;
+    padding: 0 5.5555555556vw;
+    margin: 0;
+  }
+  main .card figure {
+    padding: 11.3888888889vw 4.4444444444vw 63.8888888889vw;
+    margin: 0 0 35.5555555556vw;
+    background-color: rgb(248, 232, 218);
+    border-radius: 10px;
+  }
+  main .card figure img {
+    position: absolute;
+    right: 4%;
+    bottom: -4%;
+    width: 65%;
+  }
+  main .card figure figcaption h4 {
+    font-family: "acumin-pro-condensed";
+    color: #ff5f00;
+    line-height: 0.7916666667;
+    font-weight: 900;
+    font-size: 13.3333333333vw;
+    font-style: italic;
+    white-space: unset;
+    padding: 0 1.1111111111vw;
+  }
+  main .card figure figcaption p {
+    font-family: "Pretendard Medium";
+    font-size: 3.8888888889vw;
+    margin: 30px 0 60px 0;
+    width: 75%;
+  }
+  main .card figure figcaption button {
+    font-size: 3.8888888889vw;
+    paddig: 2.2222222222vw 6.6666666667vw;
+    height: 11.1111111111vw;
+  }
+  footer {
+    width: 100%;
+    height: 110vh;
+    padding: 35vw 5vw 22vw 5vw;
+    background-color: rgb(255, 95, 0);
+    color: white;
+  }
+  footer .text {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    height: 20vw;
+  }
+  footer .text .link {
+    width: 100%;
+    margin-top: 4.1666666667vw;
+  }
+  footer .text .link div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-top: 4.1666666667vw;
+    margin-bottom: 0;
+    height: 3vw;
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(1) {
+    margin-left: 22px;
+    font-size: 3.8888888889vw;
+    transform: translateY(-35%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(1) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 3.8888888889vw;
+    transform: translateY(-35%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(1) {
+    margin: 0 10px;
+    font-size: 3.8888888889vw;
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(2) {
+    margin-left: 22px;
+    font-size: 3.8888888889vw;
+    transform: translateY(-35%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(3) {
+    margin: 0 10px;
+    font-size: 3.8888888889vw;
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(4) {
+    display: none;
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(5) {
+    margin: 0 10px;
+    font-size: 3.8888888889vw;
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(6) {
+    margin-left: 22px;
+    font-size: 3.8888888889vw;
+    transform: translateY(-35%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(8) {
+    margin-left: 22px;
+    font-size: 3.8888888889vw;
+    transform: translateY(-35%) rotate(-90deg);
+  }
+  footer .text .link div:nth-of-type(2) span:nth-of-type(10) {
+    display: none;
+  }
+  footer .text .link div:nth-of-type(2) a:nth-of-type(2) {
+    font-family: "Pretendard ExtraBold";
+    font-size: 4.1666666667vw;
+    line-height: 15px;
+  }
+  footer .text .link div a {
+    color: white;
+    font-family: "Pretendard Medium";
+    font-size: 3.8888888889vw;
+    line-height: 14px;
+    padding-bottom: 6vw;
+  }
+  footer .text .link div .material-symbols-outlined {
+    font-size: 3.8888888889vw;
+  }
+  footer .text form select {
+    width: 90vw;
+    padding: 5px 0;
+    appearance: none;
+    color: white;
+    border-width: 0;
+    border-bottom: 2px solid white;
+    font-size: 3.8888888889vw;
+    font-family: "Proxima Nova Extrabold";
+    background-color: transparent;
+    background: url(../icons/arrow_drop.svg) no-repeat 95% 50%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  footer .text form select option {
+    background: rgb(255, 95, 0);
+    color: #fff;
+    padding: 3px 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  footer .b-text {
+    padding: 0;
+    position: relative;
+    margin-top: 5.4444444444vw;
+  }
+  footer .b-text strong {
+    display: block;
+    font-size: 13.3333333333vw;
+    font-family: "Proxima Nova Extrabold";
+    position: absolute;
+    left: 0;
+    bottom: 14%;
+    letter-spacing: -3px;
+  }
+  footer .b-text div {
+    width: 100%;
+    height: 65vw;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  footer .b-text div p {
+    font-family: "Pretendard Medium";
+    font-size: 2.7777777778vw;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: capitalize;
+  }
+  footer .b-text div figure {
+    display: inline-block;
+    width: 100%;
+    padding-top: 26vw;
+  }
+  footer .b-text div figure a img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 7%;
+    margin-right: 2%;
+  }
+}

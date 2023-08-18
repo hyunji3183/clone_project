@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <article class="at">
+        <h2> 출석부 (<code></code>) </h2>
+        <p>
+            <input type="text">
+            <button> save </button>
+        </p>
+        <ul>
+        </ul>
+    </article>
+
+    <script>
+        const elText = document.querySelector('.at input'),
+            elButton = document.querySelector('.at button'),
+            elUl = document.querySelector('.at Ul');
+        elLen = document.querySelector('.at code');
+        let data = [], ulTag;
+
+
+        elButton.onclick = function () {
+            if (elText.value != '') {
+                data.push(elText.value);
+
+                ulTag = '';
+                data.forEach(function (name) {
+                    ulTag += `<li>${name}</li>`;
+                })
+                elUl.innerHTML = ulTag;
+                elLen.innerText = data.length;
+            }
+        }
+
+        // elLen.innerText = data.length; 가 onclick 밖에있으면 실시간으로 반영불가
+            // console.log(elText.value);
+            // elUl.innerHTML += `<li>${elText.value}</li>`;
+
+    </script>
+
+
+    <article class="photo">
+        <h2>이미지 등록 <button>추가</button></h2>
+        <ul>
+        </ul>
+    </article>
+
+    <!-- 버튼클릭> ul 태그안에 이미지를 출력함
+    등록할 값이 없을 경우에는 콘솔차에 메세지 출력 ('등록할 이미지가 없습니다.')
+    -->
+
+    <script>
+        const elPhotoBtn = document.querySelector('.photo button'),
+            elPhotoUl = document.querySelector('.photo ul');
+
+
+        let imgs = ['./img/익명5.jpg', './img/익명4.jpg', './img/익명3.jpg', './img/익명2.jpg'];
+        let photoTag, photoNum = 0;
+        let msg = '등록할 이미지가 없습니다.'
+
+        elPhotoBtn.onclick = function () {
+            if (photoNum != imgs.length) {
+                photoTag = `<li><img src="${imgs[photoNum]}"></li>`;
+                elPhotoUl.innerHTML += photoTag;
+                photoNum++;
+            }
+            else {
+                console.log(msg);
+            }
+            const elPhotoLi = document.querySelectorAll('.photo li');
+            
+            elPhotoLi.forEach(function (v,k) {
+                elPhotoLi[k].onclick = function () {
+                    alert(k);
+                    console.log(event.target);
+                }
+            })
+        }
+
+        function photoEvent(){
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

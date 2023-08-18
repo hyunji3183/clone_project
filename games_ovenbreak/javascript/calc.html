@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 대입연산자(=), 산술연산자(+,-,*,/,%)
+    비교연산자(<,>,<=,>=,==,!=,!==,===), 논리연산자(!,&&,||)
+    할당연산자(+=,-=,*=,/=,%=), 증감연산자(++, --)/ 할당과 증감 연산자는 변수의 값이 바뀜-->
+
+    <script>
+        let x = 100, y = 200;
+
+        console.group('산술연산자');
+        console.log(`100+200=${x + y}`);
+        console.log(`100-200=${x - y}`);
+        console.log(`100*200=${x * y}`);
+        console.log(`100/200=${x / y}`);
+        console.log(`100%200=${x % y}`);
+        console.groupEnd();
+
+
+        console.group('증감연산자');
+        console.log(`++x = ${++x}`); /* 1씩 증가시켜서 실행 */
+        console.log(`x++ = ${x++}`); /* 실행 후 1씩 증가 */
+        console.groupEnd();
+
+
+        console.group('비교연산자'); /* 부등호 기호는 좌측위치 필 */
+        console.log(`x > y = ${x > y}`);
+        console.log(`x < y = ${x < y}`);
+        console.log(`x >= y = ${x >= y}`);
+        console.log(`x <= y = ${x <= y}`);
+        console.log(`x == y = ${x == y}`);
+        console.log(`x != y = ${x != y}`);
+
+        console.log(typeof (x != y));
+
+        /* 타입과 값이 같은지 확인(일치연산자) */
+        console.log(`x === y = ${x === y}`);
+        console.log(`x !== y = ${x !== y}`);
+
+        console.log(' 200' == 200);
+        console.log(' 200' === 200);
+        console.groupEnd();
+
+
+
+        // ! 논리부정 (참은 거짓으로, 거짓은 참으로)
+        // && 논리곱 (좌우변 모두 참일때 참)
+        // || 논리합 (좌우변 둘 중 하나라도 참일 때 참)
+        console.group('논리연산자');
+        console.log(`(x > y) && (x < y) = ${(x > y) && (x < y)}`);
+        console.log(`(x > y) || (x < y) = ${(x > y) || (x < y)}`);
+        console.log(`!true = ${!true}`);
+        console.groupEnd();
+
+
+        console.group('할당연산자');
+        console.log(` x += y = ${x += y} `);
+
+
+
+        let tag = ` <figure>
+                            <img src="">
+                            <p>제목</p>
+                            <a>확인</a>
+                        </figure>`;
+
+        tag += `<article><h2>타이틀</h2></article>`;
+        // 위 방법으로 새로운문자를 추가 할 수 있음
+
+        tag = `<article><h2>타이틀</h2></article>`;
+        // 위 방법은 tag 변수 재정의
+        console.log(tag);
+        console.groupEnd();
+    </script>
+
+    <article>
+        <h2>당신의 뇌 구조</h2>
+        <ul>
+            <li><code></code> 점수 : <code></code></li>
+            <li><code></code> 점수 : <code></code></li>
+            <li><code></code> 점수 : <code></code></li>
+        </ul>
+        <p>당신의 관심분야는 <code></code>입니다.(<code></code>점)</p>
+    </article>
+
+    <script>
+        let b1 = '연애',
+            b2 = '미디어',
+            b3 = '코딩';
+
+            a1 = 200,
+            a2 = 70,
+            a3 = 100;
+
+        a1 > a2
+        a1 > a3
+        a2 > a3
+
+        let n = 0;
+
+        if (n < a1) { n = a1 };
+        if (n < a2) { n = a2 };
+        if (n < a3) { n = a3 };
+        console.log(n);
+
+        console.log(Math.max(a1,a2,a3));
+
+        // const elli = document.querySelector('li:nth-of-type(1)'),
+        //     elCode = elli.querySelector('code:nth-of-type(1)');
+
+        const codeName = document.querySelectorAll('li code:nth-of-type(1)');
+        codeNum = document.querySelectorAll('li code:nth-of-type(2)');
+
+        const result = document.querySelectorAll('p code');
+
+        codeName[0].innerText = b1;
+        codeName[1].innerText = b2;
+        codeName[2].innerText = b3;
+
+        codeNum[0].innerText = a1;
+        codeNum[1].innerText = a2;
+        codeNum[2].innerText = a3;
+
+
+        result[0].innerText = b1;
+        result[1].innerText = a1;
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+@import "_reset";
+
+.bi {
+    .head {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        padding: 0 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: "Proxima Nova Extrabold";
+        font-weight: 800;
+
+        &:hover .bar {
+            display: block;
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+
+        h2 {
+            font-size: 20px;
+            display: inline-block;
+            color: white;
+        }
+
+        li {
+            position: relative;
+            float: left;
+
+            a {
+                display: block;
+                padding: 0 15px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                color: white;
+            }
+
+            .bar {
+                display: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+
+                li {
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .vi {
+        figure {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+            img {}
+
+            figcaption {
+                p {
+                    position: absolute;
+                    left: 40%;
+                    bottom: 50%;
+                }
+
+                span {
+                    position: absolute;
+                    left: 39%;
+                    bottom: 41%;
+                    font-family: 'Pretendard Black';
+                    font-weight: 500;
+                    font-size: 32px;
+                    color: white;
+                }
+            }
+        }
+    }
+
+
+    .ovengames {
+        margin: 5% 0;
+
+        h4 {
+            text-align: center;
+            font-family: 'Pretendard Black';
+            font-size: 48px;
+        }
+
+        .text {
+            font-family: 'Pretendard SemiBold';
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+            white-space: pre-line;
+            text-align: center;
+
+            p {}
+        }
+
+        .trailer {
+            margin: 1% 20%;
+
+            figure {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                video {
+                    source {}
+                }
+
+                div {
+                    width: inherit;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0, 0, 0, 0.35);
+                }
+
+                figcaption {
+                    position: absolute;
+                    left: 0%;
+                    top: 30%;
+                    width: inherit;
+                    white-space: pre-line;
+                    text-align: center;
+
+                    strong {
+                        font-family: 'Pretendard Black';
+                        font-size: 32px;
+                        color: white;
+                    }
+
+                    a {
+                        margin-top: 4%;
+                        display: inline-block;
+                        font-family: "Proxima Nova Extrabold";
+                        font-size: 16px;
+                        color: white;
+                        border: 2px solid white;
+                        padding: 20px 24px;
+                        border-radius: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    .oven {
+        margin: 10% 20%;
+        border-bottom: 1px solid rgb(229, 229, 229);
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            &:nth-of-type(2) {
+                flex-direction: row-reverse;
+                margin: 15% 0;
+            }
+
+            &:nth-of-type(3) {
+                margin-bottom: 10%;
+            }
+
+            .c_text {
+                width: 50%;
+                white-space: pre-line;
+
+                h5 {
+                    font-family: 'Pretendard Black';
+                    font-size: 48px;
+                }
+
+                p {
+                    font-family: 'Pretendard SemiBold';
+                    font-size: 16px;
+                    color: rgb(51, 51, 51);
+                    white-space: pre-line;
+                    line-height: 24px;
+                }
+            }
+
+            .c_img {
+                width: 45%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    width: fit-content;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    img {
+                        animation: move;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: infinite;
+                        animation-duration: 2.7s;
+
+                        @keyframes move {
+                            0% {
+                                transform: translateY(-5%);
+                            }
+
+                            50% {
+                                transform: translateY(0%);
+                            }
+
+                            100% {
+                                transform: translateY(-5%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .WE_CREATE {
+        margin: 1% 20%;
+
+        h3 {
+            font-family: "acumin-pro-condensed";
+            font-size: 90px;
+            font-style: italic;
+            font-weight: 900;
+            color: rgb(255, 95, 0);
+        }
+
+        p {
+            font-family: 'Pretendard SemiBold';
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+            white-space: pre-line;
+            line-height: 24px;
+            margin-bottom: 3%;
+        }
+
+        div {
+            width: 100%;
+            display: flex;
+
+
+            .pop {
+                width: 70%;
+                border: 1px solid rgb(220, 220, 220);
+                border-radius: 10px;
+                overflow: hidden;
+                margin-right: 3%;
+
+                &:hover {
+                    transform: translateY(-20px);
+                    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+                    transition: .5s;
+                    overflow: hidden;
+                }
+
+                figure {
+                    width: fit-content;
+
+                    img {
+
+                        width: 100%;
+                    }
+
+                    figcaption {
+                        white-space: pre-line;
+                        padding: 5%;
+
+                        p {
+                            display: inline-block;
+                            font-family: 'Pretendard ExtraBold';
+                            font-size: 16px;
+                            font-weight: 900;
+                            color: rgb(51, 51, 51);
+                            white-space: pre-line;
+                            line-height: 24px;
+                            margin-bottom: 5px;
+                        }
+
+                        strong {
+                            font-family: 'Pretendard Black';
+                            font-size: 24px;
+                            font-weight: 900;
+                        }
+
+                        span {
+                            display: inline-block;
+                            font-family: 'Pretendard SemiBold';
+                            font-size: 16px;
+                            color: rgb(51, 51, 51);
+                            white-space: pre-line;
+                            line-height: 24px;
+                            margin: 3% 0;
+                        }
+
+                        a {
+                            font-family: 'Proxima Nova Extrabold';
+                            color: rgb(255, 95, 0);
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        margin: 10% 18%;
+        position: relative;
+
+        figure {
+            width: 100%;
+            background-color: rgb(248, 232, 218);
+            padding: 80px;
+            border-radius: 8px;
+
+            img {
+                position: absolute;
+                right: 12%;
+                bottom: 0;
+            }
+
+            figcaption {
+
+
+                h4 {
+                    white-space: pre-line;
+                    font-family: "acumin-pro-condensed";
+                    color: #ff5f00;
+                    line-height: 58px;
+                    font-weight: 900;
+                    font-size: 72px;
+                    font-style: italic;
+                }
+
+                p {
+                    font-family: "Pretendard Medium";
+                    font-size: 16px;
+                    margin: 30px 0;
+                }
+
+                button {}
+            }
+        }
+    }
+}
+
+footer {
+    padding: 5% 18%;
+    background-color: rgb(255, 95, 0);
+    color: white;
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .link {
+            div {
+                margin-bottom: 10px;
+
+                &:nth-of-type(1) span:nth-of-type(1) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(1) span:nth-of-type(2) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) span:nth-of-type(1) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) span:nth-of-type(2) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) span:nth-of-type(3) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) span:nth-of-type(4) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) span:nth-of-type(5) {
+                    margin: 0 10px;
+                    font-size: 10px;
+                    border: 0.5px solid #fff;
+                }
+
+                &:nth-of-type(2) a:nth-of-type(2) {
+                    font-family: "Pretendard ExtraBold";
+                    font-size: 15px;
+                    line-height: 15px;
+                }
+
+                a {
+                    color: white;
+                    font-family: "Pretendard Medium";
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+
+                svg {
+                    width: 6px;
+                    vertical-align: middle;
+                    margin: 0 6px;
+                }
+            }
+        }
+
+        form {
+            select {
+                width: 180px;
+                padding: 5px 0;
+                appearance: none;
+                color: white;
+                border-width: 0;
+                border-bottom: 2px solid white;
+                font-size: 14px;
+                font-family: "Proxima Nova Extrabold";
+                background-color: transparent;
+                background: url(../icons/arrow_drop.svg) no-repeat 95% 50%;
+
+                -moz-appearance: none;
+                -webkit-appearance: none;
+
+                option {
+                    background: rgb(255, 95, 0);
+                    color: #fff;
+                    padding: 3px 0;
+                    appearance: none;
+                }
+            }
+        }
+    }
+
+    .b-text {
+        strong {
+            display: block;
+            padding-top: 110px;
+            font-size: 160px;
+            font-family: "Proxima Nova Extrabold";
+        }
+
+        div {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                font-family: "Pretendard Medium";
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            figure {
+                object-fit: contain;
+
+                a {
+                    margin: 0 10px;
+
+                    img {}
+                }
+            }
+        }
+    }
+}

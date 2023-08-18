@@ -1,0 +1,68 @@
+body,p,figure,h2,h3,h4,h5,div
+{margin: 0px;}
+
+body{
+    width: 100%;
+}
+*{box-sizing: border-box;
+text-transform: uppercase;
+word-break: keep-all;}
+
+a
+{text-decoration: none;
+color: black;}
+
+img,video{
+    vertical-align: middle;}
+    
+ul,li 
+{margin: 0;
+padding: 0;
+list-style-type: none;}
+
+@font-face {
+    font-family: 'Acumin Pro-Ultra Black';
+    src: url('../fonts/FontsFree-Net-Acumin-Pro-UltraBlack.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Proxima Nova Extrabold';
+    src: url('../fonts/FontsFree-Net-Proxima-Nova-Xbold.otf') format("truetype") ;
+}
+
+@font-face {
+    font-family: 'Pretendard Black';
+    src: url('../fonts/Pretendard-Black.otf') format("truetype") ;
+}
+
+@font-face {
+    font-family: 'Pretendard Medium';
+    src: url('../fonts/Pretendard-Medium.otf') format("truetype") ;
+}
+
+@font-face {
+    font-family: 'Pretendard SemiBold';
+    src: url('../fonts/Pretendard-SemiBold.otf') format("truetype") ;
+}
+
+@font-face {
+    font-family: 'Pretendard ExtraBold';
+    src: url('../fonts/Pretendard-ExtraBold.otf') format("truetype") ;
+}
+
+*button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    font-family: "Proxima Nova Extrabold";
+    font-size: 15.5px;
+    padding: 16px 24px;
+    border-radius: 36px;
+    span{
+        padding-left: 8px;
+    }
+    }
+
+    

@@ -2,22 +2,22 @@ $('main').prepend('<header></header>');
 $('header').load('./html/header.html header>article', head);
 
 function head() {
-	
+
 	$('.head li a').on({
-		mouseenter:function(){
+		mouseenter: function () {
 			$('.bi')
-			.addClass('active')
-			.css({
-				'height': $('.bar').height()+70+'px'
-			});
+				.addClass('active')
+				.css({
+					'height': $('.bar').height() + 70 + 'px'
+				});
 		}
 	})
-	$('.bi').on('mouseleave',function(){
+	$('.bi').on('mouseleave', function () {
 		$('.bi')
-		.removeClass('active')
-		.css({
-			'height': '48px'
-		});
+			.removeClass('active')
+			.css({
+				'height': '48px'
+			});
 	})
 
 }
@@ -36,7 +36,7 @@ function loadJS() {
 			change.status = (change.y > change.y2) ? true : false;
 
 			if (change.status) {
-				elscroll.classList.add('active')				
+				elscroll.classList.add('active')
 			}
 			else {
 				elscroll.classList.remove('active')
@@ -74,7 +74,7 @@ function loadJS() {
 	header();
 
 
-	
+
 
 	// $('header .bi .head').on('mouseenter', function(){
 	// 	$('header .bi .head li').stop().slideUp();
@@ -85,39 +85,37 @@ function loadJS() {
 
 
 
-	var swiper = new Swiper(".slider.mySwiper", {
-		/* autoplay: {
+	var swiper = new Swiper(".slider", {
+		slidesPerView: 5,
+		spaceBetween: 20,
+		autoplay: {
 			delay: 0,
-			disableOnInteraction: false,
-		},         */
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	dynamicBullets: true,
-		// },
+			disableOnInteraction: true,
+		},
+		speed: 20000,
 		loop: true,
-		freeMode: true,
-
+		slidesPerGroup: 5,
 		breakpoints: {
-			360: {
-				slidesPerView: 1,
-				spaceBetween: 20,
-			},
-			720: {
+			640: {
 				slidesPerView: 2,
 				spaceBetween: 20,
 			},
-			960: {
-				slidesPerView: 3,
-				spaceBetween: 30,
-			},
-			1280: {
+			720: {
 				slidesPerView: 4,
-				spaceBetween: 30,
+				spaceBetween: 40,
+				autoplay: {
+					delay: 0,
+					disableOnInteraction: true,
+				},
 			},
-			1600: {
+			1024: {
 				slidesPerView: 5,
 				spaceBetween: 20,
-			}
+				autoplay: {
+					delay: 0,
+					disableOnInteraction: true,
+				},
+			},
 		},
 	});
 
@@ -151,8 +149,8 @@ function loadJS() {
 
 	const elGroup = document.querySelectorAll('.group');
 
-	function show (entries, observer){
-		entries.forEach(function(entry){
+	function show(entries, observer) {
+		entries.forEach(function (entry) {
 			console.log(entry.target);
 			if (entry.isIntersecting) {
 				entry.target.classList.add('on')
@@ -160,7 +158,7 @@ function loadJS() {
 			}
 		})
 	}
-	
+
 	let opt = {
 		rootMargin: '0px',
 		threshold: 0.4
@@ -168,11 +166,10 @@ function loadJS() {
 
 	const intersection = new IntersectionObserver(show, opt);
 	// intersection.observe(elDiv);
-	elGroup.forEach(function(div)
-	{
+	elGroup.forEach(function (div) {
 		intersection.observe(div);
 	});
-	
+
 
 
 
